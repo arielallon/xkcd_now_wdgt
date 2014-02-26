@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                font-weight: 300;
+                color: #333;
+            }
+            
+            a { color: #333; }
+            
+            .refresh_link { 
+                font-size: 14px; 
+                position: absolute;
+                right: 10px;
+                bottom: 8px;
+                padding-top: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <span id="comic">
+<img src="http://c.xkcd.com/redirect/comic/now" title="This image stays roughly in sync with the day (assuming the Earth continues spinning). Shortcut: xkcd.com/now" alt="Now" id="comic_now">
+            <script type="text/javascript">
+                var refresh = function() {
+                    document.getElementById('comic_now').src="http://c.xkcd.com/redirect/comic/now";}
+                }
+                setInterval(refresh(), 30000);
+            </script>
+        </span>
+        <div class="refresh_link"><a href="javascript:refresh();">refresh</a></div>
+    </body>
+</html>
