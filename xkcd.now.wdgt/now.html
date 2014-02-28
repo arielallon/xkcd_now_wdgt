@@ -4,6 +4,7 @@
             body {
                 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
                 font-weight: 300;
+                background-color: #aaa;
                 color: #333;
             }
             
@@ -22,8 +23,8 @@
         <span id="comic">
 <img src="http://c.xkcd.com/redirect/comic/now" title="This image stays roughly in sync with the day (assuming the Earth continues spinning). Shortcut: xkcd.com/now" alt="Now" id="comic_now">
             <script type="text/javascript">
-                var refresh = function() {
-                    document.getElementById('comic_now').src="http://c.xkcd.com/redirect/comic/now";}
+                function refresh() {
+                        document.getElementById('comic_now').src="";           document.getElementById('comic_now').src="http://c.xkcd.com/redirect/comic/now";
                 }
                 setInterval(refresh(), 30000);
             </script>
